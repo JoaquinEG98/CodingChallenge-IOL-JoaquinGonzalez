@@ -13,7 +13,8 @@ En cuanto a los idiomas, creé una nueva clase llamada "Traducciones". Dentro de
 
 ## A tener en cuenta
 Tuve que actualizar los paquetes NuGet de los tests ya que no me funcionaban. Si les da error, lo que hay que hacer es borrar la carpeta Packages que se encuentra en la raíz de la solución.
-Además, los tests podrían fallar según la cultura de la computadora que tengan al momento de correrlos. Por ejemplo, a mi los decimales me los pone con punto en vez de coma, pero en los tests los deje con coma ya que ví que así estaban antes.
+
+Además, los tests podrían fallar según la cultura de la computadora que tengan al momento de correrlos. Por ejemplo, a mi los decimales me los pone con punto en vez de coma. Dejé los tests para los dos tipos de cultura, sólo que dejé comentada la cultura en inglés por si las necesitan cambiar.
 
 
 
