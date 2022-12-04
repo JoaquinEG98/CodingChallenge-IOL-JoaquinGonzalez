@@ -97,6 +97,7 @@ namespace CodingChallenge.Data.Tests
             Assert.AreEqual("<h1>Rapport de formulaires</h1>3 Trapèzes | Aire  90  | Périmètre  43 <br/>TOTAL:<br/>3 Formes Périmètre 43 Aire 90", resumen);
         }
 
+        #region Cultura en Español
         [TestCase]
         public void TestResumenListaConMasTipos()
         {
@@ -160,5 +161,73 @@ namespace CodingChallenge.Data.Tests
                 "<h1>Rapport de formulaires</h1>2 Carrés | Aire 29 | Périmètre 28 <br/>2 Cercles | Aire 52,03 | Périmètre 36,13 <br/>3 Triangles | Aire  49,64  | Périmètre  51,6 <br/>1 Trapèze | Aire  15  | Périmètre  11 <br/>TOTAL:<br/>8 Formes Périmètre 126,73 Aire 145,67",
                 resumen);
         }
+        #endregion
+
+
+        #region Cultura en Inglés
+        //[TestCase]
+        //public void TestResumenListaConMasTipos()
+        //{
+        //    var formas = new List<FormaGeometrica>
+        //    {
+        //        new Cuadrado(5),
+        //        new Circulo(3),
+        //        new TrianguloEquilatero(4),
+        //        new Cuadrado(2),
+        //        new TrianguloEquilatero(9),
+        //        new Circulo(12.75m),
+        //        new TrianguloEquilatero(4.2m)
+        //    };
+
+        //    var resumen = new GeneradorReporte("English").Imprimir(formas);
+
+        //    Assert.AreEqual(
+        //        "<h1>Shapes report</h1>2 Squares | Area 29 | Perimeter 28 <br/>2 Circles | Area 538.98 | Perimeter 98.96 <br/>3 Triangles | Area  49.64  | Perimeter  51.6 <br/>TOTAL:<br/>7 shapes Perimeter 178.56 Area 617.62",
+        //        resumen);
+        //}
+
+        //[TestCase]
+        //public void TestResumenListaConMasTiposEnCastellano()
+        //{
+        //    var formas = new List<FormaGeometrica>
+        //    {
+        //        new Cuadrado(5),
+        //        new Circulo(3),
+        //        new TrianguloEquilatero(4),
+        //        new Cuadrado(2),
+        //        new TrianguloEquilatero(9),
+        //        new Circulo(2.75m),
+        //        new TrianguloEquilatero(4.2m)
+        //    };
+
+        //    var resumen = new GeneradorReporte("Espaniol").Imprimir(formas);
+
+        //    Assert.AreEqual(
+        //        "<h1>Reporte de Formas</h1>2 Cuadrados | Area 29 | Perimetro 28 <br/>2 Círculos | Area 52.03 | Perimetro 36.13 <br/>3 Triángulo Equiláteros | Area  49.64  | Perimetro  51.6 <br/>TOTAL:<br/>7 formas Perimetro 115.73 Area 130.67",
+        //        resumen);
+        //}
+
+        //[TestCase]
+        //public void TestResumenListaConMasTiposEnFrances()
+        //{
+        //    var formas = new List<FormaGeometrica>
+        //    {
+        //        new Cuadrado(5),
+        //        new Circulo(3),
+        //        new TrianguloEquilatero(4),
+        //        new Cuadrado(2),
+        //        new TrianguloEquilatero(9),
+        //        new Circulo(2.75m),
+        //        new TrianguloEquilatero(4.2m),
+        //        new Trapecio(3, 2, 1, 5, 2, 6, 3),
+        //    };
+
+        //    var resumen = new GeneradorReporte("Français").Imprimir(formas);
+
+        //    Assert.AreEqual(
+        //        "<h1>Rapport de formulaires</h1>2 Carrés | Aire 29 | Périmètre 28 <br/>2 Cercles | Aire 52.03 | Périmètre 36.13 <br/>3 Triangles | Aire  49.64  | Périmètre  51.6 <br/>1 Trapèze | Aire  15  | Périmètre  11 <br/>TOTAL:<br/>8 Formes Périmètre 126.73 Aire 145.67",
+        //        resumen);
+        //}
+        #endregion
     }
 }
