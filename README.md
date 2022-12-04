@@ -12,7 +12,8 @@ Creé otra clase abstracta llamada Reporte, en donde están hechos los cálculos
 En cuanto a los idiomas, creé una nueva clase llamada "Traducciones". Dentro de esta lo que hice fue crear un diccionario con todos los idiomas, por lo que si se desea agregar uno, lo unico que se debe hacer es agregar un nuevo tipo de idioma con su traducción al diccionario. En caso de que se pase un idioma que no existe al generar los reportes, utilizará el idioma default que es el Español.
 
 ## A tener en cuenta
-Tuve que actualizar los paquetes NuGet de los tests ya que no me funcionaban. Además, los tests podrían fallar según la cultura de la computadora que tengan al momento de correrlos. Por ejemplo, a mi los decimales me los pone con punto en vez de coma, pero en los tests los deje con coma ya que ví que así estaban antes.
+Tuve que actualizar los paquetes NuGet de los tests ya que no me funcionaban. Si les da error, lo que hay que hacer es borrar la carpeta Packages que se encuentra en la raíz de la solución.
+Además, los tests podrían fallar según la cultura de la computadora que tengan al momento de correrlos. Por ejemplo, a mi los decimales me los pone con punto en vez de coma, pero en los tests los deje con coma ya que ví que así estaban antes.
 
 
 
