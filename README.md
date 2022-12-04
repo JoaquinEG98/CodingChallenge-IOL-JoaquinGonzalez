@@ -1,4 +1,4 @@
-Esta es mi solución para el Conding Challenge!
+## Esta es mi solución para el Conding Challenge!
 
 Primero que nada, encontré varias soluciones a este problema. Al principio pensé en implementar el Patrón de Diseño Strategy, pero me encontré con una limitación: no se pueden agregar instancias de Figuras a una lista de FormaGeometrica porque Cuadrado no sería una subclase de FormaGeometrica.
 Una solución a este problema, es cambiar la clase FormaGeometrica para que sea genérica y acepte como parámetro el tipo de forma geométrica que se quiere utilizar.
