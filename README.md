@@ -1,32 +1,18 @@
+Esta es mi solución para el Conding Challenge!
 
-# InvertirOnline.com Coding Challenge
+Primero que nada, encontré varias soluciones a este problema. Al principio pensé en implementar el Patrón de Diseño Strategy, pero me encontré con una limitación: no se pueden agregar instancias de Figuras a una lista de FormaGeometrica porque Cuadrado no sería una subclase de FormaGeometrica.
+Una solución a este problema, es cambiar la clase FormaGeometrica para que sea genérica y acepte como parámetro el tipo de forma geométrica que se quiere utilizar.
 
-Bienvenido!
+Con esta solución el código no quedaba muy legible, por lo que lo realicé de diferente manera. Hice que FormaGeometrica sea una clase abstracta y que las figuras hereden esta clase, teniendo que implementar los métodos CalcularArea() y CalcularPerimetro(). También desacoplé los modulos, separé los reportes de las figuras geométricas, ya que cada clase debería encargarse de una sola responsabilidad.
 
-Nos encontramos en la búsqueda de desarrolladores .NET para que se incorporen a nuestro equipo. Después de múltiples procesos de selección, llegamos a la conclusión de que el código habla por si mismo. Con lo cual si te sentís dispuesto a afrontar el desafío, por favor tomate un rato para jugar con el problema y resolverlo.
+Creé otra clase abstracta llamada Reporte, en donde están hechos los cálculos de las formas según el tipo. Además, cree una subclase llamada "GeneradorReporte" en donde hereda de Reporte, implementando obligatoriamente el método Imprimir(). Este método solo es necesario modificarlo si se agrega una nueva figura, para agregar un nuevo StringBuilder.
 
-### Cómo participar del proceso?
+En cuanto a los idiomas, creé una nueva clase llamada "Traducciones". Dentro de esta lo que hice fue crear un diccionario con todos los idiomas, por lo que si se desea agregar uno, lo unico que se debe hacer es agregar un nuevo tipo de idioma con su traducción al diccionario. En caso de que se pase un idioma que no existe al generar los reportes, utilizará el idioma default que es el Español.
 
-Abajo detallamos el problema a resolver, cuando consideres que está resuelto, **no** envíes pull request. Enviá un mail a busquedas.it@invertironline.com con tu resolución (con un link de descarga al repositorio de tu preferencia), y si tenés algún comentario sobre tu implementación, también podés agregarlo ahí.
+## A tener en cuenta
+Tuve que actualizar los paquetes NuGet de los tests ya que no me funcionaban. Además, los tests podrían fallar según la cultura de la computadora que tengan al momento de correrlos. Por ejemplo, a mi los decimales me los pone con punto en vez de coma, pero en los tests los deje con coma ya que ví que así estaban antes.
 
-### El problema
 
-Tenemos un método que genera un reporte en base a una colección de formas geométricas, procesando algunos datos para presentar información extra. La firma del método es:
 
-```csharp
-public static string Imprimir(List<FormaGeometrica> formas, int idioma)
-```
-
-Al mismo tiempo, encontramos muy díficil el poder agregar o bien una nueva forma geométrica, o imprimir el reporte en otro idioma. Nos gustaría poder dar soporte para que el usuario pueda agregar otros tipos de formas u obtener el reporte en otros idiomas, pero extender la funcionalidad del código es muy doloroso. ¿Nos podrías dar una mano a refactorear la clase FormaGeometrica? Dentro del código encontrarás un TODO con nuevos requerimientos a satisfacer una vez completada la refactorización.
-
-Acompañando al proyecto encontrarás una serie de tests unitarios (librería NUnit) que describen el comportamiento del método Imprimir. **Se puede modificar cualquier cosa del código y de los tests, con la única condición que los tests deben pasar correctamente al entregar la solución.** 
-
-Se agradece también la inclusión de nuevos tests unitarios para validar el comportamiento de la nueva funcionalidad agregada.
-
-### Cómo funciona
-
-Lo que te encontrás al levantar la .sln es una librería con el objeto de negocio FormaGeometrica, y un pequeño proyecto con test unitarios sobre el método de impresión de reporte.
-
-La resolución es libre y cómo encarar el problema queda en el criterio de quien lo resuelva!
-
-**¡¡Buena suerte!!**
+Eso es todo, muchas gracias por darme la posibilidad de realizar este challenge.
+Saludos!
