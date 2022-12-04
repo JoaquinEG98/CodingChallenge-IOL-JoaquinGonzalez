@@ -1,9 +1,11 @@
 ## Esta es mi solución para el Conding Challenge!
 
 Primero que nada, encontré varias soluciones a este problema. Al principio pensé en implementar el Patrón de Diseño Strategy, pero me encontré con una limitación: no se pueden agregar instancias de Figuras a una lista de FormaGeometrica porque Cuadrado no sería una subclase de FormaGeometrica.
-Una solución a este problema, es cambiar la clase FormaGeometrica para que sea genérica y acepte como parámetro el tipo de forma geométrica que se quiere utilizar.
+Una solución a este problema, es cambiar la clase FormaGeometrica para que sea genérica y acepte como parámetro el tipo de forma geométrica que se quiere utilizar pero el código era más dificil de leer.
 
-Con esta solución el código no quedaba muy legible, por lo que lo realicé de diferente manera. Hice que FormaGeometrica sea una clase abstracta y que las figuras hereden esta clase, teniendo que implementar los métodos CalcularArea() y CalcularPerimetro(). También desacoplé los modulos, separé los reportes de las figuras geométricas, ya que cada clase debería encargarse de una sola responsabilidad.
+Otra solución que encontré es utilizar el Patrón de Diseño Chains of Responsability, pero la desventaja que tiene es que el código es más complicado de seguir y también a medida que se van agregando más figuras geométricas, el rendimiento empeora, ya que cada solicitud debe pasar por toda la cadena.
+
+Con estas soluciones el código no quedaba muy legible, por lo que lo realicé de diferente manera. Hice que FormaGeometrica sea una clase abstracta y que las figuras hereden esta clase, teniendo que implementar los métodos CalcularArea() y CalcularPerimetro(). También desacoplé los modulos, separé los reportes de las figuras geométricas, ya que cada clase debería encargarse de una sola responsabilidad.
 
 Creé otra clase abstracta llamada Reporte, en donde están hechos los cálculos de las formas según el tipo. Además, cree una subclase llamada "GeneradorReporte" en donde hereda de Reporte, implementando obligatoriamente el método Imprimir(). Este método solo es necesario modificarlo si se agrega una nueva figura, para agregar un nuevo StringBuilder.
 
